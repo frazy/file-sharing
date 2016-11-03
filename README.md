@@ -8,6 +8,10 @@ http://dl.bitlei.com/
 请自行修改 view/index.html
 
 ## 参数
+```
 ./file-sharing -l=:11080 -d=/var/files/
+```
+
 -l=ip:port
+
 -d=目录
