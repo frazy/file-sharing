@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{if .title}}{{.title}} - {{end}}bitlei.com</title>
+<meta name="description" content="File Sharing.">
+<link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+<style type="text/css">
+body,div,span,a,table,tr,th,td,header,section,footer,h1{margin:0;padding:0;}
+a,a:hover{color:#00e;text-decoration:none;}
+body{width:728px;margin:0 auto;font:13px/1.14 arial;}
+header{margin:10px 0 10px;}
+table{border-collapse:collapse;}
+tr{display:block;padding:2px 0;}
+th{border-bottom:1px solid #eee;text-align:left;}
+.td-fn{width:450px;}
+.td-fn a{display:block;width:450px;white-space:nowrap;word-break:keep-all;overflow:hidden;text-overflow:ellipsis;}
+.td-fd{width:150px;}
+.td-fs{width:128px;}
+footer{margin:10px 0 5px;font-size:12px;text-align:right;color:#888;}
+</style>
+</head>
+<body>
+<header><h1>File Sharing</h1></header>
+<section>
+    <table>
+        <tr><th class="td-fn">File Name</th><th class="td-fd">Date</th><th class="td-fs">File Size</th></tr>
+        <tr><td class="td-fn"><a href="../">Parent directory/</a></td><td class="td-fd">-</td><td class="td-fs">-</td></tr>
+        {{range .files}}
+        <tr><td class="td-fn"><a href="{{.Path}}" title="{{.Name}}">{{.Name}}</a></td><td class="td-fd">{{.ModTime}}</td><td class="td-fs">{{.Size}}</td></tr>
+        {{end}}
+    </table>
+</section>
+<footer>Copyright 2017 &copy; bitlei.com. All rights reserved.</footer>
+</body>
+</html>
