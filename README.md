@@ -1,6 +1,8 @@
 # file-sharing
 File list and sharing service
 
+文件显示和下载服务
+
 ## demo
 http://dl.bitlei.com/
 
